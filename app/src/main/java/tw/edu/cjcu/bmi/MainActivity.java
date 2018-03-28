@@ -1,5 +1,6 @@
 package tw.edu.cjcu.bmi;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,5 +33,11 @@ public class MainActivity extends AppCompatActivity {
         float h = Float.parseFloat(editText2.getText().toString());
         float bmi = w/(h*h);
         Toast.makeText(this, bmi+"", Toast.LENGTH_SHORT).show();
+        new AlertDialog.Builder(this)
+                .setMessage("BMI="+bmi)
+                .setTitle("BMI值")
+                .setPositiveButton("確定",null )
+                .setNegativeButton("CANCEL",null)
+                .show();
     }
 }
