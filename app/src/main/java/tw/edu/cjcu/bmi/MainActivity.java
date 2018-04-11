@@ -1,5 +1,6 @@
 package tw.edu.cjcu.bmi;
 
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton("確定",null )
                 .setNegativeButton("CANCEL",null)
                 .show();
+        Intent intent = new Intent(this,ResultActivity.class);
+        startActivity(intent);
     }
 }
